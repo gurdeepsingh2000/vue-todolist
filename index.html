@@ -37,7 +37,7 @@
 
             <div class="row justify-content-center my-4">
                 <ul class="col-lg-8 col-md-6 col-sm-5 col-6 bg-list">
-                    <li v-for = '(element,index) in list_task'>
+                    <li class='py-2 mx-1' v-for = '(element,index) in list_task'>
                         {{element}} <i @click = 'deleteTask(index)' class="fas fa-trash-alt"></i>
                     </li>
                 </ul>

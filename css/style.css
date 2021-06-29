@@ -1,3 +1,19 @@
 .boolean{
     width: 100%;
 }
+
+ul li{
+    list-style: none;
+}
+
+.type_txt{
+    width: 100%;
+}
+
+.button-push{
+    width: 100%;
+}
+
+.bg-list{
+    background-color: #f5f7f7
+}

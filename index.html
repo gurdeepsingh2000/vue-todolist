@@ -15,9 +15,16 @@
 
     <div id="app">
         <div class="button">
-            <input v-model= 'add_Task' placeholder="Nuovo todo">
+            <input @keyup.enter = 'pushTask' v-model= 'add_Task' placeholder="Nuovo todo">
             <button @click='pushTask'>Aggiungi</button>
         </div>
+
+        <ul>
+            <li v-for = '(element,index) in list_task'>
+                {{element}} <i @click = 'deleteTask(index)' class="fas fa-trash-alt"></i>
+            </li>
+        </ul>
+
     </div>
 
     <script type="text/javascript" src="./js/my-script.js"></script> 

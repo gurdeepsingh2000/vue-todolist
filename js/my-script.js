@@ -8,12 +8,16 @@ new Vue (
             add_Task: ''
         },
         methods:{
-            pushTask: function(){
-                this.list_task.push(this.add_Task);
-                this.add_Task = ''
-            },
             deleteTask: function(actual_position){
                 this.list_task.splice(actual_position , 1)
+            },
+            pushTask: function(){
+                if(this.add_Task.length === 0){
+                    alert('Devi aggiungere qualcosa!')
+                }else{
+                    this.list_task.push(this.add_Task);
+                }
+                this.add_Task = ''
             }
         }
     }

@@ -15,7 +15,7 @@
 
     <div id="app">
         <div class="button">
-            <input @keyup.enter = 'pushTask' v-model= 'add_Task' placeholder="Nuovo todo">
+            <input v-if ="" @keyup.enter = 'pushTask' v-model= 'add_Task' placeholder="Nuovo todo">
             <button @click='pushTask'>Aggiungi</button>
         </div>
 

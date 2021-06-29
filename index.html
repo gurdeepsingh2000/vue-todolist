@@ -14,17 +14,35 @@
 <body>
 
     <div id="app">
-        <div class="button">
-            <input v-if ="" @keyup.enter = 'pushTask' v-model= 'add_Task' placeholder="Nuovo todo">
-            <button @click='pushTask'>Aggiungi</button>
+
+        <div class="container"> 
+            <div class="row justify-content-center my-4">
+                <div class="col-4">
+                    <img class="boolean" src="./img/logo-boolean.png" alt="">
+                </div>
+            </div>   
+
+            <div class="row justify-content-center my-4">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-8">
+                            <input @keyup.enter = 'pushTask' v-model= 'add_Task' placeholder="Nuovo todo">
+                         </div>
+                    <div class="col-4">
+                        <button @click='pushTask'>Aggiungi</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="row justify-content-center my-4">
+                <ul class="col-lg-8 col-md-6 col-sm-5 col-6">
+                    <li v-for = '(element,index) in list_task'>
+                        {{element}} <i @click = 'deleteTask(index)' class="fas fa-trash-alt"></i>
+                    </li>
+                </ul>
         </div>
-
-        <ul>
-            <li v-for = '(element,index) in list_task'>
-                {{element}} <i @click = 'deleteTask(index)' class="fas fa-trash-alt"></i>
-            </li>
-        </ul>
-
+    </div>
     </div>
 
     <script type="text/javascript" src="./js/my-script.js"></script> 

@@ -4,7 +4,7 @@ new Vue (
     {
         el: '#app', 
         data:{
-            list_task: [],
+            list_task: ['Comprare Il Latte',"Comprare l'insalata",'Comprare Il pane'],
             add_Task: ''
         },
         methods:{
